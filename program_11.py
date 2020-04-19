@@ -87,13 +87,13 @@ Wildcat_5=DataDF
 
 #plot daily flow for both streams for the past 5 years
 plt.subplot(211)
-plt.plot(Tippe_5["Discharge"], 'k^', label='Tippecanoe')
+plt.plot(Tippe_5["Discharge"], 'k^', label='Tippecanoe River')
 plt.legend()
 plt.show()
 plt.ylim(1,15000)
 
 plt.subplot(212)   
-plt.plot(Wildcat_5["Discharge"], 'k+', label='Wildcat')
+plt.plot(Wildcat_5["Discharge"], 'k+', label='Wildcat River')
 plt.xlabel("Date")
 plt.ylim(1,15000)
 plt.ylabel(".                                Discharge (cubic feet per second)")
@@ -110,8 +110,8 @@ wildcat_met=Ann_met[Ann_met['Station']=='Wildcat']
 
 
 #plot annual coeff of var
-plt.plot(tippe_met["Coeff Var"], 'k*', label='Tippecanoe')
-plt.plot(wildcat_met["Coeff Var"], 'k+', label='Wildcat')
+plt.plot(tippe_met["Coeff Var"], 'k*', label='Tippecanoe River')
+plt.plot(wildcat_met["Coeff Var"], 'k+', label='Wildcat River')
 plt.xlabel("Year")
 plt.ylabel("Coefficient of Variation")
 #ax=plt.gca()
@@ -123,8 +123,8 @@ plt.show()
 plt.savefig('coeffvar.png', dpi=96)
 
 #plot annual tqmean
-plt.plot(tippe_met["Tqmean"], 'k*', label='Tippecanoe')
-plt.plot(wildcat_met["Tqmean"], 'k+', label='Wildcat')
+plt.plot(tippe_met["Tqmean"], 'k*', label='Tippecanoe River')
+plt.plot(wildcat_met["Tqmean"], 'k+', label='Wildcat River')
 plt.xlabel("Year")
 plt.ylabel("TQMean (%)")
 #ax=plt.gca()
@@ -136,8 +136,8 @@ plt.savefig('tqmean.png', dpi=96)
 #plot annual RBrichards baker flashiness index  
 
 
-plt.plot(tippe_met["R-B Index"], 'k*', label='Tippecanoe')
-plt.plot(wildcat_met["R-B Index"], 'k+', label='Wildcat')
+plt.plot(tippe_met["R-B Index"], 'k*', label='Tippecanoe River')
+plt.plot(wildcat_met["R-B Index"], 'k+', label='Wildcat River')
 plt.xlabel("Year")
 plt.ylabel("Richards Baker Flashiness Index")
 #ax=plt.gca()
@@ -164,8 +164,8 @@ wild_ranks2=wild_ranks1[::-1]
 wild_ep=[(wild_ranks2[i]/(len(wild_flow)+1)) for i in range(len(wild_flow))]
 
 #plot exceeedence probability
-plt.plot(tippe_ep, tippe_flow['Peak Flow'], label='Tippecanoe', color='black')
-plt.plot(wild_ep, wild_flow['Peak Flow'], label='Wildcat')
+plt.plot(tippe_ep, tippe_flow['Peak Flow'], label='Tippecanoe River', color='black')
+plt.plot(wild_ep, wild_flow['Peak Flow'], label='Wildcat River')
 plt.xlabel("Exceedence Probability")
 plt.ylabel("Peak Discharge (CFS)")
 plt.tight_layout()
@@ -175,10 +175,10 @@ plt.show()
 
 plt.savefig('exceedence.png', dpi=96)
 
-
-
-
-
+    
+    
+    
+    
 
 
 
